@@ -51,6 +51,7 @@ async function loadGallery() {
 
         return (
           file.type === "file" &&
+          name !== "hero.jpg" &&
           (
             name.endsWith(".jpg") ||
             name.endsWith(".jpeg") ||
