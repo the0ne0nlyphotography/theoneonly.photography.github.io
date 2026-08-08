@@ -267,9 +267,7 @@ em { font-family: var(--serif); font-weight: 400; }
 }
  .gallery {
   columns: 2 200px;
-  }
-  .gallery-item--large, .gallery-item--tall { grid-row: span 1; }
-  .gallery-item--wide { grid-column: span 2; }
+ 
   .statement { grid-template-columns: 1fr; gap: 45px; }
   .statement-image { max-width: 650px; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
