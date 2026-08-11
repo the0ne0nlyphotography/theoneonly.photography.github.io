@@ -281,9 +281,12 @@ em { font-family: var(--serif); font-weight: 400; }
   .gallery {
     columns: 1;
     column-gap: 0;
+    width: 100%;
   }
 
   .gallery-item {
+    display: block;
+    width: 100%;
     margin: 0 0 16px;
     break-inside: avoid;
   }
@@ -296,6 +299,8 @@ em { font-family: var(--serif); font-weight: 400; }
     display: block;
     width: 100%;
     height: auto;
+    padding: 0;
+    margin: 0;
     aspect-ratio: auto;
   }
 
@@ -335,8 +340,6 @@ em { font-family: var(--serif); font-weight: 400; }
     grid-column: span 1;
     grid-row: span 1;
   }
-  .gallery-button { aspect-ratio: 4/5; }
-  .gallery-button img { object-fit: cover; }
   .contact-actions { flex-direction: column; align-items: center; }
   .button { width: 220px; }
   .service-grid { grid-template-columns: 1fr; }
