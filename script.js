@@ -46,19 +46,20 @@ async function loadGallery() {
     const files = await response.json();
 
     const imageFiles = files
-      .filter(file => {
-        const name = file.name.toLowerCase();
+  .filter(file => {
+    const name = file.name.toLowerCase();
 
-        return (
-          file.type === "file" &&
-          (
-            name.endsWith(".jpg") ||
-            name.endsWith(".jpeg") ||
-            name.endsWith(".png") ||
-            name.endsWith(".webp")
-          )
-        );
-      })
+    return (
+      file.type === "file" &&
+      name !== "hero.jpg" &&
+      (
+        name.endsWith(".jpg") ||
+        name.endsWith(".jpeg") ||
+        name.endsWith(".png") ||
+        name.endsWith(".webp")
+      )
+    );
+  })
       .sort((a, b) =>
         a.name.localeCompare(b.name, undefined, {
           numeric: true,
